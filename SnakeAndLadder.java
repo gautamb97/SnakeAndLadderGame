@@ -36,6 +36,8 @@ class Player{
              }
              System.out.println("Die Value: "+die);
          }
+    	 if(playerPosition>winning_point)
+             playerPosition =winning_point;
          System.out.println("Player position " + playerPosition);
          System.out.println("Hip....Hip...Hurrey....I won!!!");
      }
