@@ -7,3 +7,8 @@ public class SnakeAndLadder {
 	}
 
 }
+
+class Player{
+    int playerPosition = 0;
+
+}
