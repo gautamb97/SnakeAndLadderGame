@@ -16,8 +16,10 @@ class Player{
     double die = 1+(Math.floor(Math.random() * 10 ) % 6);
     
     public void chooseOption(){
-
+    	 int number_of_time_player_played=0;
     	 while(playerPosition<winning_point) {
+    		 number_of_time_player_played++;
+             System.out.println("Number of times player played: "+number_of_time_player_played);
              if (playerPosition < 0)
                  playerPosition = 0;
              int choose = (int) Math.floor(Math.random() * 10) % 3;
@@ -35,10 +37,11 @@ class Player{
                      break;
              }
              System.out.println("Die Value: "+die);
+             if(playerPosition>winning_point)
+                 playerPosition =winning_point;
+             System.out.println("Player position " + playerPosition);
          }
-    	 if(playerPosition>winning_point)
-             playerPosition =winning_point;
-         System.out.println("Player position " + playerPosition);
+    	 
          System.out.println("Hip....Hip...Hurrey....I won!!!");
      }
     
